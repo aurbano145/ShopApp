@@ -1,0 +1,11 @@
+game
+id, name, idplatform, release date, idesrb, developers, publishers, idgenre1, idgenre2, idgenre3, description, price, boxart
+
+platform
+id, name
+
+esrb
+id, name
+
+genre
+id, name
