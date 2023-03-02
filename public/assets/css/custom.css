@@ -1,0 +1,16 @@
+body {
+    overflow-y: hidden;
+}
+
+.goto-home {
+	text-transform: uppercase !important;
+	font-weight: 600 !important;
+	padding: 10px 0 !important;
+	margin: 0 20px !important;
+	display: block !important;
+	border-bottom: 1px solid transparent !important;
+	transition: border-bottom-color .25s !important;
+	border-bottom-color: #cd9967 !important;
+	color: #cd9967 !important;
+	text-decoration: none !important;
+}

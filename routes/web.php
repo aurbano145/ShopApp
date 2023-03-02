@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Simple
+Route::get('simple', [App\Http\Controllers\ClothesController::class, 'index'])->name('clothes.simple');
+Route::get('simple-single', [App\Http\Controllers\ClothesController::class, 'show'])->name('clothes.simple-single');
+
+//Ajax
+Route::get('ajax', [App\Http\Controllers\AjaxClothesController::class, 'index'])->name('clothes.ajax');
