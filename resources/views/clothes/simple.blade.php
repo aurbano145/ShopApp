@@ -234,14 +234,14 @@
                                             <div class="filter-items filter-items-count">
                                                 <div class="filter-item">
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="cat-1">
-                                                        <label class="custom-control-label" for="cat-1">Man</label>
+                                                        <!--input type="checkbox" class="custom-control-input" id="cat-1"-->
+                                                        <label class="custom-control-label" for="cat-1"><a href="{{ $order['genres.name']['asc'] }}">Man</a></label>
                                                     </div><!-- End .custom-checkbox -->
                                                 </div><!-- End .filter-item -->
     
                                                 <div class="filter-item">
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="cat-2">
+                                                        <!--input type="checkbox" class="custom-control-input" id="cat-2"-->
                                                         <label class="custom-control-label" for="cat-2">Woman</label>
                                                     </div><!-- End .custom-checkbox -->
                                                 </div><!-- End .filter-item -->

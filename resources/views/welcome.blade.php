@@ -65,11 +65,11 @@
 			</header>
 			<div id="main">
 				<section class="banner section-dark" style="background: #222;">
-					<img src="{{ url('assets/images/custom/home.jpg') }}" alt="" width="1920" height="1120">
-					<div class="banner-text text-center">
+					<img src="{{ url('assets/images/custom/homebg.png') }}" alt="" width="1920" height="1120">
+					<!--div class="banner-text text-center">
 						<h1>Multi-Purpose eCommerce HTML5 Template</h1>
 						<h5 class="mb-5">Molla is simply the best choice for your new website. Your search for the best solution is over, get your own copy and join thousands of happy customers.</h5>
-					</div>
+					</div-->
 				</section>
 			</div>
 		</div>

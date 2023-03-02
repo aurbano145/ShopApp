@@ -10,7 +10,7 @@ use App\Classes\PaginationTool;
 use App\Classes\NewPaginationTool;
 
 class ClothesController extends Controller {
-    const ITEMS_PER_PAGE = 1;
+    const ITEMS_PER_PAGE = 10;
     const ORDER_BY = 'clothes.name';
     const ORDER_TYPE = 'asc';
 
