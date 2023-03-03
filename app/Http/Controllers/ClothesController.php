@@ -10,7 +10,7 @@ use App\Classes\PaginationTool;
 use App\Classes\NewPaginationTool;
 
 class ClothesController extends Controller {
-    const ITEMS_PER_PAGE = 10;
+    const ITEMS_PER_PAGE = 1;
     const ORDER_BY = 'clothes.name';
     const ORDER_TYPE = 'asc';
 
@@ -28,10 +28,11 @@ class ClothesController extends Controller {
 
     private function getOrderBys() {
         return [
-            'clothes.name'           => 'b1',
-            'genres.name'       => 'b2',
-            'categories.name'       => 'b3',
-            'brands.name'       => 'b4',
+            'clothes.name' => 'b1',
+            'genres.name' => 'b2',
+            'categories.name' => 'b3',
+            'brands.name' => 'b4',
+            'clothes.price' => 'b5'
         ];
     }
 
@@ -99,13 +100,13 @@ class ClothesController extends Controller {
         $clotheses = $clothes->paginate(self::ITEMS_PER_PAGE)->withQueryString();
         
         //dd($clotheses);
-        return view('clothes.simple', ['order'  => $this->getOrderUrls($orderby, $ordertype, $q, 'clothes.simple'),
+        return view('clothes.index', ['order'  => $this->getOrderUrls($orderby, $ordertype, $q, 'clothes.index'),
                                     'q'     => $q,
                                     'url'   => url('clothes'),
                                     'clotheses' => $clotheses]);
     }
     
     public function show(Clothes $clothes) {
-        return view('clothes.simple-single', ['clothes' => $clothes]);
+        return view('clothes.show', ['clothes' => $clothes]);
     }
 }

@@ -23,8 +23,9 @@ function fetchData(page) {
 }
 
 function showData(data) {
-    //let tbody = document.getElementById('clothesAjaxBody');
-    //let paginationDiv = document.getElementById('pagination');
+    let clothesInfo = document.getElementById("clothesInfo");
+    let clothesPages = document.getElementById("clothesPages");
+
     //let usernavbar = document.getElementById('user-navbar');
     /*let userItems = document.querySelectorAll('#user-navbar .nav-item');
     userItems.forEach(li => {
@@ -47,7 +48,7 @@ function showData(data) {
     let pagination = data.clotheses.links;
 
     //csrf
-    console.log(csrf == data.csrf,csrf, data.csrf);
+    console.log(csrf == data.csrf, csrf, data.csrf);
 
     // table body
     let string = '';
@@ -84,7 +85,7 @@ function showData(data) {
         `
         ;
     });
-    let clothesInfo = document.getElementById("clothesInfo");
+    
     clothesInfo.innerHTML = string;
 
     // pagination
@@ -93,13 +94,13 @@ function showData(data) {
         if (pag.active) {
             string += `
                 <li class="page-item active" aria-current="page">
-                    <a class="page-link" href="${pag.url}">${pag.label}</a>
+                    <a class="page-link pulsable" data-url="${pag.url}">${pag.label}</a>
                 </li>
             `;
         } else if (pag.url != null) {
             string += `
                 <li class="page-item">
-                    <a class="btn btn-link" href="${pag.url}" id="${'pag' + pag.label}">${pag.label}</span>
+                    <a class="btn btn-link pulsable" data-url="${pag.url}" id="${'pag' + pag.label}">${pag.label}</span>
                 </li>
             `;
         } else {
@@ -110,7 +111,7 @@ function showData(data) {
             `;
         }
     });
-    let clothesPages = document.getElementById("clothesPages");
+    
     clothesPages.innerHTML = string;
 }
 

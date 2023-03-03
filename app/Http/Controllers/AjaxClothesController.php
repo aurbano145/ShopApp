@@ -15,7 +15,7 @@ class AjaxClothesController extends Controller {
     const ORDER_TYPE = 'asc';
 
     function index(Request $request) {
-        return view('clothes.ajax');
+        return view('ajax.index');
     }
     
     function fetchData(Request $request) {

@@ -50,13 +50,13 @@
 					<div class="header-main">
 						<ul class="menu">
 							<li>
-								<a href="https://aurbano145.ieszaidinvergeles.es/laraveles/ShopApp/public/" class="goto-home">Home</a>
+								<a href="{{ url('') }}" class="goto-home">Home</a>
 							</li>
 							<li>
-								<a href="https://aurbano145.ieszaidinvergeles.es/laraveles/ShopApp/public/simple" class="goto-simple">Simple Shop</a>
+								<a href="{{ url('clothes') }}" class="goto-simple">Simple Shop</a>
 							</li>
 							<li>
-								<a href="https://aurbano145.ieszaidinvergeles.es/laraveles/ShopApp/public/ajax" class="goto-ajax">Ajax Shop</a>
+								<a href="{{ url('ajax') }}" class="goto-ajax">Ajax Shop</a>
 							</li>
 						</ul>
 					</div>

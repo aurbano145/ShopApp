@@ -18,8 +18,8 @@ Route::get('/', function () {
 });
 
 //Simple
-Route::get('simple', [App\Http\Controllers\ClothesController::class, 'index'])->name('clothes.simple');
-Route::get('simple-single', [App\Http\Controllers\ClothesController::class, 'show'])->name('clothes.simple-single');
+Route::resource('clothes', App\Http\Controllers\ClothesController::class);
 
 //Ajax
-Route::get('ajax', [App\Http\Controllers\AjaxClothesController::class, 'index'])->name('clothes.ajax');
+Route::resource('ajax', App\Http\Controllers\AjaxClothesController::class);
+//Route::get('ajax', [App\Http\Controllers\AjaxClothesController::class, 'index'])->name('clothes.ajax');
